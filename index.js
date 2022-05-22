@@ -12,6 +12,7 @@ const url = "https://api.kanye.rest"
 }
 
 function showKanyeQuote(data) {
+
 let newQuote = document.createElement('p');
 newQuote.innerHTML = data.quote;
 
