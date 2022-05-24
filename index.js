@@ -2,6 +2,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
 let kanyeQuoteButton = document.getElementById('kanyeQuoteGenerator');
 kanyeQuoteButton.addEventListener('click', fetchKanyeQuote);
+
 });
 
 function fetchKanyeQuote() {
@@ -12,9 +13,12 @@ const url = "https://api.kanye.rest"
 }
 
 function showKanyeQuote(data) {
-
-let newQuote = document.createElement('p');
+let newQuote = document.getElementById('newQuote')
 newQuote.innerHTML = data.quote;
 
-document.querySelector("div").appendChild(newQuote);
+let insertQuote = document.getElementById('insertQuote');
+insertQuote.appendChild(newQuote);
+
 }
+
+
