@@ -23,7 +23,14 @@ h1 {
     font-size: 40px;
 }
 
+img {
+    width: 600px;
+    height: 700px;
+    filter: grayscale(100%);
+}
+
 #kanyeQuoteGenerator {
+    margin: 50px;
     background-color: #050505;
     border: none;
     padding: 15px 32px;
@@ -44,10 +51,6 @@ h1 {
     outline-offset: 300px;
 }
 
-img {
-    width: 420px;
-    filter: grayscale(100%);
-}
 
 p#newQuote {
     padding: 20px;

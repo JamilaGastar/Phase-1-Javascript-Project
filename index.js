@@ -1,5 +1,13 @@
 document.addEventListener('DOMContentLoaded', function() {
 
+let imgElement = document.querySelector('figure#imagesSlideshow img')
+let images = ['./kanyeImages/img1.jpg', './kanyeImages/img2.jpg', './kanyeImages/img3.jpg', './kanyeImages/img4.jpg', './kanyeImages/img5.jpg', './kanyeImages/img6.jpg', './kanyeImages/img7.jpg', './kanyeImages/img8.jpg', './kanyeImages/img9.jpg', './kanyeImages/img10.jpg', './kanyeImages/img11.jpg', './kanyeImages/img12.jpg', './kanyeImages/img13.jpg', './kanyeImages/img14.jpg'];
+
+    setInterval(function(){
+    let random = Math.floor(Math.random() * 14);
+    imgElement.src = images[random];
+}, 900);
+
 let kanyeQuoteButton = document.getElementById('kanyeQuoteGenerator');
 kanyeQuoteButton.addEventListener('click', fetchKanyeQuote);
 
@@ -13,6 +21,12 @@ let laughingCrying = document.getElementById('laughingCrying');
 laughingCrying.addEventListener('click', laughingCryingToQuote)
 
 });
+
+// titleBlinker = setInterval(function () {
+//     let title = document.querySelector('h1');
+//     title.style.visibility = (title.style.visibility == 'hidden' ? '' : 'hidden');
+// }, 1000);
+
 
 function fetchKanyeQuote() {
 const url = "https://api.kanye.rest"
@@ -28,21 +42,19 @@ newQuote.innerHTML = data.quote;
 let insertQuote = document.getElementById('insertQuote');
 insertQuote.appendChild(newQuote);
 
-let leaveAReaction = document.getElementById('leaveAReaction');
-    leaveAReaction.style.visibility = "visible";
+// let leaveAReaction = document.getElementById('leaveAReaction');
+//     leaveAReaction.style.visibility = "visible";
 
 }
 
 function praiseQuote() {
 
-    let leaveAReaction = document.getElementById('leaveAReaction');
+    // let leaveAReaction = document.getElementById('leaveAReaction');
 
-    let praisedByUser = document.createElement('p');
-    praisedByUser.innerHTML= ('&#128588');
-    leaveAReaction.appendChild(praisedByUser);
+    // let praisedByUser = document.createElement('p');
+    // praisedByUser.innerHTML= ('PRAISE KANYE');
+    // leaveAReaction.appendChild(praisedByUser);
 
-    let reactionEmojis = document.getElementsByClassName('reactionEmoji');
-    reactionEmojis.remove();
 }
 
 function likeQuote() {
