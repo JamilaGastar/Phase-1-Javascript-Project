@@ -1,8 +1,6 @@
 html body {
     font-family: Arial, Helvetica, Sans-serif;
     color: rgb(248, 238, 155);
-    font-size: 40px;
-    letter-spacing: 5px;
     background-color: #262424;
     background-image: url(./kanyeBackground.webp);
     background-size: cover;
@@ -17,16 +15,28 @@ html body {
     margin-top: 40px;
     margin-bottom: 40px;
     padding: 10px;
+    min-width: 700px;
 }
 
 h1 {
-    font-size: 40px;
+    font-size: 50px;
+}
+
+p {
+    font-size: 17px;
+    color: rgb(171, 151, 151);
+    text-transform: uppercase;
+}
+
+figure {
+    margin: 50px;
 }
 
 img {
     width: 600px;
     height: 700px;
     filter: grayscale(100%);
+    overflow: clip;
 }
 
 #kanyeQuoteGenerator {
@@ -39,6 +49,7 @@ img {
     text-decoration: none;
     display: inline-block;
     font-size: 20px;
+    text-transform: uppercase;
     outline: 3px solid;
     outline-color: rgb(189, 63, 63,0.5);
     outline-offset: 15px;
@@ -55,29 +66,24 @@ img {
 p#newQuote {
     padding: 20px;
     font-style: italic;
+    font-size: 40px;
+    letter-spacing: 5px;
+    color: rgb(248, 238, 155);
+    text-transform: none;
 }
 
-p:first-letter{
+p#newQuote:first-letter{
         font-weight: bold;
         font-size: 60px;
+        color: rgb(248, 238, 155);
 }
 
-#leaveAReaction {
-    padding: 10px;
-    margin: 20px;
-    visibility: hidden;
+#like-symbol {
+    color: white;
+    font-size: 40px;
 }
 
-p.reactionEmoji {
-    display: inline;
-    padding: 8px;
+#like-symbol.liked {
+    color: red;
 }
-
-p.reactionEmoji:hover {
-    transform: scale(5);
-    background-color: rgb(189, 63, 63,0.5);
-    border-radius: 30px;
-}
-
-
 
