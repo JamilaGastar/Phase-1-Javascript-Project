@@ -41,9 +41,6 @@ function showKanyeQuote(data) {
 let newQuote = document.getElementById('newQuote')
 newQuote.innerHTML = `"${data.quote}"`;
 
-let insertQuote = document.getElementById('insertQuote');
-insertQuote.appendChild(newQuote);
-
 }
 
 function createLikes() {
@@ -72,18 +69,5 @@ function unlike() {
 }
 
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 )
